@@ -121,6 +121,14 @@
 
     /* Quote mark */
     .quote-mark { font-size: 5rem; line-height: 0; color: #c8e6c2; font-family: Georgia, serif; vertical-align: -0.4em; margin-right: 4px; }
+
+    /* ── Mobile overrides ── */
+    @media (max-width: 768px) {
+      #navbar { padding: 12px 16px; top: 10px; width: calc(100% - 20px); }
+      .section-title { font-size: 1.6rem; }
+      .card { padding: 20px; }
+      .photo-frame::before { inset: -5px; }
+    }
   </style>
 </head>
 <body>
@@ -167,17 +175,17 @@
   <section id="home" aria-label="Hero section">
     <div id="hero">
       <div class="hero-grid-lines" aria-hidden="true"></div>
-      <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20">
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-28 sm:pt-32 pb-16 sm:pb-20">
         <div class="flex flex-col lg:flex-row items-end gap-6 lg:gap-8">
 
           <!-- Text -->
-          <div class="flex-1 text-center lg:text-left">
+          <div class="flex-1 text-center lg:text-left w-full">
             <div class="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-8" style="background:rgba(47,107,63,0.12); border:1px solid rgba(47,107,63,0.25);">
               <span class="w-2 h-2 rounded-full animate-pulse" style="background:#2F6B3F;"></span>
               <span class="text-sm font-semibold" style="color:#1A3D25;">久留米市議会議員 × プロホルン奏者</span>
             </div>
 
-            <h1 class="font-heading font-bold mb-4 leading-tight" style="font-size: clamp(2.5rem, 6vw, 4.5rem); color:#1A3D25;">
+            <h1 class="font-heading font-bold mb-4 leading-tight" style="font-size: clamp(2rem, 8vw, 4.5rem); color:#1A3D25;">
               石田<br/>
               <span style="color:#2F6B3F;">しんいちろう</span>
             </h1>
@@ -199,7 +207,7 @@
             </div>
 
             <!-- Stats -->
-            <div class="flex gap-10 mt-14 justify-center lg:justify-start">
+            <div class="flex gap-6 sm:gap-10 mt-10 sm:mt-14 justify-center lg:justify-start flex-wrap">
               <div>
                 <div class="font-heading font-bold text-3xl" style="color:#1A3D25;">2,276</div>
                 <div class="text-sm mt-1" style="color:#7FB77E;">得票数</div>
@@ -218,13 +226,13 @@
           </div>
 
           <!-- Photo -->
-          <div class="flex-shrink-0 flex justify-center lg:justify-end reveal">
+          <div class="flex-shrink-0 flex justify-center lg:justify-end reveal w-full lg:w-auto">
             <div class="photo-frame">
               <img
                 src="hero2.png"
                 alt="石田しんいちろう – 久留米の街を愛犬と歩く"
                 class="object-cover shadow-2xl"
-                style="width: clamp(340px, 46vw, 680px); max-height: 720px; object-position: center top; display:block;"
+                style="width: min(88vw, 680px); max-width: 680px; max-height: 60vw; min-height: 260px; object-position: center top; display:block;"
               />
             </div>
           </div>
